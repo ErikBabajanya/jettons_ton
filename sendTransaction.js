@@ -17,7 +17,6 @@ async function sendTransaction(address) {
 
     const contract = client.open(sender);
     const seqno = await contract.getSeqno();
-
     await contract.sendTransfer({
       secretKey: key.secretKey,
       seqno: seqno,
